@@ -18,5 +18,8 @@ public class Constants {
 	public static final String SOLD_OUT_SUFFIX = " is sold out.";
 	public static final String INSERT_QUARTER_FIRST = "Please Insert a Quarter First.";
 	public static final String SODA_LIST_FILE_NAME = "/SodaList.txt";
+	public static final String COIN_RETURN_TEXT = "Return Coin";
+	public static final String RETURN_COIN_MESSAGE = "Here is Your Quarter!";
+	public static final String MESSAGE_TITLE = "Message";
 
 }

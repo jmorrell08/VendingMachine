@@ -20,7 +20,8 @@ public class VendingMachine extends JFrame {
 	private JLabel lblDispense;
 	private JComboBox<String> comboBox;
 	private JButton btnPressToInsert;
-	JButton btnVendSelectedSoda;
+	private JButton btnVendSelectedSoda;
+	private JButton btnCoinReturn;
 	
 	public VendingMachine() {
 		
@@ -60,6 +61,22 @@ public class VendingMachine extends JFrame {
 		});
 		btnPressToInsert.setBounds(58, 24, 170, 28);
 		this.getContentPane().add(btnPressToInsert);
+		
+		btnCoinReturn = new JButton(Constants.COIN_RETURN_TEXT);
+		btnCoinReturn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (hasQuarter) {
+					hasQuarter = false;
+					btnPressToInsert.setText(Constants.DEFAULT_QUARTER_BUTTON);
+					JOptionPane.showMessageDialog(null, 
+							Constants.RETURN_COIN_MESSAGE,
+							Constants.MESSAGE_TITLE,
+							JOptionPane.INFORMATION_MESSAGE);
+				}
+			}
+		});
+		btnCoinReturn.setBounds(58, 58, 169, 23);
+		this.getContentPane().add(btnCoinReturn);
 		
 		btnVendSelectedSoda = new JButton(Constants.VEND_BUTTON_TEXT);
 		btnVendSelectedSoda.addActionListener(new ActionListener() {

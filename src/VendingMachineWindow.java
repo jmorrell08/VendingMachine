@@ -4,6 +4,7 @@ import java.awt.event.WindowAdapter;
 import javax.swing.JFrame;
 
 import com.sun.glass.events.WindowEvent;
+import javax.swing.JButton;
 
 public class VendingMachineWindow {
 
